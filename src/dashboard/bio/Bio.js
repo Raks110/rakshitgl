@@ -18,9 +18,9 @@ function Bio() {
     return (
         <>
             <div style={{
-                maxWidth: '35%',
+                maxWidth: '50%',
                 backgroundColor: accentBackground,
-                margin: 8,
+                margin: 'auto',
                 borderRadius: 12,
                 padding: 16,
                 color: textColor
