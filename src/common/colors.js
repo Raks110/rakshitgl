@@ -8,12 +8,12 @@ const colors = {
         dark_accent: '#E78F81'
     },
     dark: {
-        primary_background: '#1E3E62',
+        primary_background: '#17153B',
         text_color: '#FFF',
-        accent: '#0B192C',
-        primary: '#FF6500',
-        secondary: '#000000',
-        dark_accent: '#FF6500'
+        accent: '#433D8B',
+        primary: '#C8ACD6',
+        secondary: '#17153B',
+        dark_accent: '#F6B17A'
     }
 }
 

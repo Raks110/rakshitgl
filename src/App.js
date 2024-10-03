@@ -5,12 +5,14 @@ import "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js";
    
 import BasicNavbar from './common/navbar/BasicNavbar';
 import Bio from './dashboard/bio/Bio';
+import Projects from './dashboard/projects/Projects';
 
 function App() {
   return (
     <div className="App">
       <BasicNavbar />
       <Bio/>
+      <Projects/>
     </div>
   );
 }

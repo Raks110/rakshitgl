@@ -11,7 +11,7 @@ function Bio() {
     var textColor = colors.light.text_color;
     if(darkTheme) {
         accentBackground = colors.dark.accent;
-        primaryBackground = colors.dark.primary_background;
+        primaryBackground = colors.dark.dark_accent;
         textColor = colors.dark.text_color;
     }
 
