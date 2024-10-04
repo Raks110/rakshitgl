@@ -1,0 +1,29 @@
+.frequency {
+    font-size:x-small;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.description {
+    font-size:small;
+}
+
+.sourceLink {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 12px 0px 4px 0px;
+    font-size: smaller;
+    border-radius: 12px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 16px;
+}

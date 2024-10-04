@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import Project from "./individual/Project";
+import Note from "./individual/Note";
 import { ThemeContext } from "../../common/theme/ThemeContext";
 import colors from "../../common/colors";
-import './Projects.css'
+import './Notes.css'
 
-function Projects({showAll}) {
+function Notes({showAll}) {
 
     const { darkTheme } = useContext(ThemeContext);
     var accentBackground = colors.light.accent;
@@ -30,17 +30,17 @@ function Projects({showAll}) {
             alignItems: 'stretch'
         }}>
             <div class="internalNavbar" style={{display: 'flex', justifyContent: 'space-between', marginLeft: '2.5%', marginRight: '2.5%'}}>
-                <span style={{marginTop: 'auto', marginBottom: 'auto'}}>recent projects</span>
+                <span style={{marginTop: 'auto', marginBottom: 'auto'}}>notes and blogs</span>
                 <a href="#" className="showAll" style={{color: textColor, backgroundColor: darkTheme ? '#00000033' : '#FFFFFF33'}}>show all <span class="material-symbols-rounded" style={{fontSize: 'x-small', marginTop: 'auto', fontWeight: 'bold'}}>expand_content</span></a>
             </div>
-            <Project config={{backgroundColor: primaryBackground, accentColor: accentText, parentBackground: accentBackground}}
-                     content={{title: 'llem', year: '2024', description: "A LLM wrapper to get an intrinsic understanding of their internal working", link: "https://github.com/Raks110/llem"}}
+            <Note config={{backgroundColor: primaryBackground, accentColor: accentText, parentBackground: accentBackground}}
+                     content={{title: 'leetcode a day', frequency: 'every week', description: "Review hand-picked problems from leetcode. New problems every week!", link: "https://github.com/Raks110/llem"}}
             />
-            <Project config={{backgroundColor: primaryBackground, accentColor: accentText, parentBackground: accentBackground}}
-                     content={{title: 'NumCPP', year: '2021', description: "A Linear Algebra machine for C++- powered by OpenCL", link: "https://github.com/Raks110/NumCPP"}}
+            <Note config={{backgroundColor: primaryBackground, accentColor: accentText, parentBackground: accentBackground}}
+                     content={{title: 'into the technaverse', frequency: 'every month', description: "Wake up, choose a topic, top-up on caffeine, and write! Delivered once a month.", link: "https://github.com/Raks110/NumCPP"}}
             />
         </div>
     )
 }
 
-export default Projects;
+export default Notes;

@@ -1,0 +1,10 @@
+.showAll {
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: smaller;
+    border-radius: 12px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}

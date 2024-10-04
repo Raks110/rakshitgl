@@ -6,6 +6,7 @@ import "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js";
 import BasicNavbar from './common/navbar/BasicNavbar';
 import Bio from './dashboard/bio/Bio';
 import Projects from './dashboard/projects/Projects';
+import Notes from './dashboard/notes/Notes';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BasicNavbar />
       <Bio/>
       <Projects/>
+      <Notes/>
     </div>
   );
 }
