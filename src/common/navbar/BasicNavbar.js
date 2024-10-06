@@ -25,7 +25,7 @@ export default function BasicNavbar() {
           background: `${accentBackground}`,
           margin: '8px',
           borderRadius: '12px'
-        }} data-bs-theme={darkTheme ? 'dark' : 'light'}>
+        }} data-bs-theme={darkTheme ? 'dark' : 'light'} className='fixed-top'>
         <Container>
           <Navbar.Brand href="#home">rakshitgl</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav">
@@ -35,7 +35,7 @@ export default function BasicNavbar() {
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="justify-content-end">
-              <Nav.Link href="#home">home</Nav.Link>
+              <Nav.Link href="#home" className='active'>home</Nav.Link>
               <Nav.Link href="#notes">notes</Nav.Link>
               <Nav.Link href="#projects">projects</Nav.Link>
               <Nav.Link href="#about">about me</Nav.Link>

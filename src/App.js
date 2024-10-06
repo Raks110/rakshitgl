@@ -12,9 +12,11 @@ function App() {
   return (
     <div className="App">
       <BasicNavbar />
-      <Bio/>
-      <Projects/>
-      <Notes/>
+      <div className='dashboard-items'>
+        <Bio/>
+        <Projects/>
+        <Notes/>
+      </div>
     </div>
   );
 }
