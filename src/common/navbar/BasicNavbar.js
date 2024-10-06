@@ -23,8 +23,9 @@ export default function BasicNavbar() {
       <Helmet bodyAttributes={{style: `background-color: ${primaryBackground}`}}/>
       <Navbar collapseOnSelect expand="sm" style={{
           background: `${accentBackground}`,
-          margin: '8px',
-          borderRadius: '12px'
+          margin: '0px',
+          borderRadius: '0px',
+          boxShadow: '0px 10px 20px ' + primaryBackground + "88"
         }} data-bs-theme={darkTheme ? 'dark' : 'light'} className='fixed-top'>
         <Container>
           <Navbar.Brand href="#home">rakshitgl</Navbar.Brand>
