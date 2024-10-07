@@ -1,12 +1,13 @@
 import "./Project.css";
 
-function Project({ theme, content }) {
+function Project({ theme, width, content }) {
   return (
     <div
       className="projectBody"
       style={{
         color: theme.dark ? "white" : "black",
         backgroundColor: theme.primaryBackground,
+        width: width >= 760 ? "47%" : "95%",
       }}
     >
       <div className="header">
@@ -20,12 +21,28 @@ function Project({ theme, content }) {
         <a
           href={content.link}
           className="sourceLink"
+          target="_blank"
           style={{
             backgroundColor: theme.accent,
             color: theme.darkAccent,
+            marginRight: 8,
+            display: content.link ? "inline-block" : "none",
           }}
         >
           source <span className="material-symbols-rounded">open_in_new</span>
+        </a>
+        <a
+          href={content.pdf}
+          className="sourceLink"
+          target="_blank"
+          style={{
+            backgroundColor: theme.accent,
+            color: theme.darkAccent,
+            display: content.pdf ? "inline-block" : "none",
+          }}
+        >
+          read more{" "}
+          <span className="material-symbols-rounded">open_in_new</span>
         </a>
       </div>
     </div>

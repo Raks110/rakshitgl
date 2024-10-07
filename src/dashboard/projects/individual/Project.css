@@ -15,11 +15,11 @@
 .sourceLink {
     text-decoration: none;
     padding: 8px 12px;
-    margin: 12px 0px 4px 0px;
+    margin: 12px 4px 4px 4px;
     font-size: smaller;
     border-radius: 12px;
-    display: block;
-    width: 100px;
+    display: inline-block;
+    min-width: 120px;
     text-align: center;
     font-weight: bold;
 }

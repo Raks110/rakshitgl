@@ -33,52 +33,72 @@ function Bio(props) {
             learning!
           </span>
         </div>
-        <div
-          className="logos"
-          style={{
-            backgroundColor: isDarkTheme ? accentBackground : primaryBackground,
-          }}
-        >
-          <Affiliation
-            imageConfig={{
-              height: 26,
-              width: 22,
-              tooltip:
-                "[2024-2025*] M.S. in Computer Science degree from the University of Chicago",
+        <div className="affiliations">
+          <div
+            className="logos"
+            style={{
+              backgroundColor: isDarkTheme
+                ? accentBackground
+                : primaryBackground,
             }}
-            logo={{
-              darkTheme: isDarkTheme,
-              darkLogo: require("../../static/uchicago.png"),
-              lightLogo: require("../../static/uchicago.png"),
+          >
+            <Affiliation
+              imageConfig={{
+                height: 26,
+                width: 22,
+                tooltip:
+                  "[2024-2025*] M.S. in Computer Science degree from the University of Chicago",
+              }}
+              logo={{
+                darkTheme: isDarkTheme,
+                darkLogo: require("../../static/uchicago.png"),
+                lightLogo: require("../../static/uchicago.png"),
+              }}
+            />
+            <Affiliation
+              style={{ marginLeft: isDarkTheme ? 10 : 13 }}
+              imageConfig={{
+                height: 22,
+                width: 20,
+                tooltip:
+                  "[2021-2024] Associate Software Engineer at Deutsche Bank.",
+              }}
+              logo={{
+                darkTheme: isDarkTheme,
+                darkLogo: require("../../static/deutsche_bank_dark.png"),
+                lightLogo: require("../../static/deutsche_bank.png"),
+              }}
+            />
+            <Affiliation
+              imageConfig={{
+                height: isDarkTheme ? 26 : 30,
+                width: isDarkTheme ? 22 : 28,
+                tooltip:
+                  "[2017-2021] B. Tech degree from Manipal Academy of Higher Education",
+              }}
+              logo={{
+                darkTheme: isDarkTheme,
+                darkLogo: require("../../static/manipal_dark.png"),
+                lightLogo: require("../../static/manipal.png"),
+              }}
+            />
+          </div>
+          <a
+            className="source"
+            href="https://github.com/Raks110/rakshitgl"
+            target="_blank"
+            style={{
+              backgroundColor: isDarkTheme
+                ? accentBackground
+                : primaryBackground,
+              color: primaryBackground,
             }}
-          />
-          <Affiliation
-            style={{ marginLeft: isDarkTheme ? 10 : 13 }}
-            imageConfig={{
-              height: 22,
-              width: 20,
-              tooltip:
-                "[2021-2024] Associate Software Engineer at Deutsche Bank.",
-            }}
-            logo={{
-              darkTheme: isDarkTheme,
-              darkLogo: require("../../static/deutsche_bank_dark.png"),
-              lightLogo: require("../../static/deutsche_bank.png"),
-            }}
-          />
-          <Affiliation
-            imageConfig={{
-              height: isDarkTheme ? 26 : 30,
-              width: isDarkTheme ? 22 : 28,
-              tooltip:
-                "[2017-2021] B. Tech degree from Manipal Academy of Higher Education",
-            }}
-            logo={{
-              darkTheme: isDarkTheme,
-              darkLogo: require("../../static/manipal_dark.png"),
-              lightLogo: require("../../static/manipal.png"),
-            }}
-          />
+          >
+            <span className="verticalCenter">check out the source code </span>
+            <span className="material-symbols-rounded verticalCenter sourceIcon">
+              open_in_new
+            </span>
+          </a>
         </div>
       </div>
     </>

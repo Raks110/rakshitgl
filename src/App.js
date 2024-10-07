@@ -15,8 +15,15 @@ import { ThemeContext } from "./common/theme/ThemeContext";
 function App() {
   const { darkTheme } = useContext(ThemeContext);
   const [themedColors, setThemedColors] = useState(colors.light);
+  const [width, setWidth] = useState(window.innerWidth);
 
-  console.log(themedColors);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  console.log(width);
   useEffect(() => {
     darkTheme ? setThemedColors(colors.dark) : setThemedColors(colors.light);
   }, [darkTheme]);
@@ -34,7 +41,7 @@ function App() {
         <BasicNavbar theme={themedColors} />
         <div className="dashboard-items">
           <Bio
-            style={styleParentFloatingItems(themedColors)}
+            style={styleParentFloatingItems(themedColors, width)}
             theme={themedColors}
             config={{
               logo: require("./static/astronaut" +
@@ -45,22 +52,39 @@ function App() {
             }}
           />
           <Projects
-            style={styleParentFloatingItems(themedColors)}
+            style={styleParentFloatingItems(themedColors, width)}
             theme={themedColors}
+            width={width}
           />
           <Notes
-            style={styleParentFloatingItems(themedColors)}
+            style={styleParentFloatingItems(themedColors, width)}
             theme={themedColors}
+            width={width}
           />
+          <span
+            className="final-footer"
+            style={{ color: darkTheme ? "white" : "black" }}
+          >
+            built with 🩵 in the windy city. more features underway.
+          </span>
         </div>
       </div>
     </>
   );
 }
 
-function styleParentFloatingItems(themedColors) {
+function styleParentFloatingItems(themedColors, width) {
   return {
-    maxWidth: "50%",
+    maxWidth:
+      width >= 1400
+        ? "50%"
+        : width >= 1200
+        ? "55%"
+        : width >= 1000
+        ? "65%"
+        : width >= 850
+        ? "75%"
+        : "95%",
     backgroundColor: themedColors.accent,
     margin: "auto",
     borderRadius: 12,

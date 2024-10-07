@@ -17,6 +17,7 @@ The project is solely built on **React** and hosted on **Google's App Engine**. 
 ## Upcoming features:
 * Ability to remember the theme chosen by the user (with browser cache)
 * List all projects and notes
+* Responsive UI viewable on mobile phones
 * View PDFs within the app (whenever any project has a relevant PDF users can read)
 * A personalized section dedicated to the creator of this site
 * Pages:

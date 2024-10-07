@@ -22,6 +22,7 @@ function Projects(props) {
       </div>
       <Project
         theme={props.theme}
+        width={props.width}
         content={{
           title: "llem",
           year: "2024",
@@ -32,11 +33,13 @@ function Projects(props) {
       />
       <Project
         theme={props.theme}
+        width={props.width}
         content={{
           title: "NumCPP",
           year: "2021",
           description: "A Linear Algebra machine for C++- powered by OpenCL",
           link: "https://github.com/Raks110/NumCPP",
+          pdf: "https://drive.google.com/file/d/1iudI7AFJh1yOrKRa0n7TyUTQ9Evzh6jK/view?usp=sharing",
         }}
       />
     </div>
