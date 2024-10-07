@@ -8,3 +8,21 @@
     text-align: center;
     font-weight: bold;
 }
+
+.internalNavbar {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2.5%;
+    margin-right: 2.5%,
+}
+
+.verticalCenter {
+    margin: auto 0px
+}
+
+.showAllIcon {
+    font-size: x-small;
+    margin-top: auto;
+    font-weight: bold;
+    margin-left: 4px;
+}

@@ -4,6 +4,11 @@
     margin-bottom: 4px;
 }
 
+.frequency > span {
+    font-size: xx-small;
+    margin: 2px;
+}
+
 .title {
     font-weight: bold;
 }
@@ -26,4 +31,16 @@
 
 .footer {
     margin-top: 16px;
+}
+
+.noteBody {
+    width: 47%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 1.5%;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: left;
 }
