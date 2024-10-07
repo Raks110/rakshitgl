@@ -11,6 +11,7 @@ function Bio(props) {
     <>
       <div style={props.style}>
         <img
+          alt="a fun little astronaut floating in the space"
           className="bioGif"
           src={props.config.logo}
           height={props.config.logoHeight}

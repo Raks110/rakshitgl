@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+Hi!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This code brews up my site- tucked in some dangling web in the long stack-overflown Spiderverse.
 
-## Available Scripts
+The project is solely built on **React** and hosted on **Google's App Engine**. The site is under construction. It will be up and running to its fullest soon!
 
-In the project directory, you can run:
+## Building the project:
+* run ```npm run local``` to build the project locally.
+* This command starts the server on ```localhost:3000```. The port is configurable.
 
-### `npm start`
+## Deployment:
+* Currently the project is deployed on App Engine. The project provides the relevant files: app.yaml and .gcloudignore to assist with that.
+* Create the build directory of the react-app.
+  * Run ```npm run build```
+* Deploy with ```gcloud app deploy```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Upcoming features:
+* Ability to remember the theme chosen by the user (with browser cache)
+* List all projects and notes
+* View PDFs within the app (whenever any project has a relevant PDF users can read)
+* A personalized section dedicated to the creator of this site
+* Pages:
+  * This section will host any web apps that can demonstrate projects I built
+  * It will provide a snapshot for the user to experiment with the project before trying it locally
+<br/>
+A lot more is brewing. The astronaut is ready to explore unchartered territories!
