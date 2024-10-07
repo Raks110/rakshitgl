@@ -87,11 +87,12 @@ function Bio(props) {
             className="source"
             href="https://github.com/Raks110/rakshitgl"
             target="_blank"
+            rel="noreferrer"
             style={{
               backgroundColor: isDarkTheme
                 ? accentBackground
                 : primaryBackground,
-              color: primaryBackground,
+              color: !isDarkTheme ? accentBackground : primaryBackground,
             }}
           >
             <span className="verticalCenter">check out the source code </span>

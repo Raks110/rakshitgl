@@ -22,6 +22,7 @@ function Project({ theme, width, content }) {
           href={content.link}
           className="sourceLink"
           target="_blank"
+          rel="noopener noreferrer"
           style={{
             backgroundColor: theme.accent,
             color: theme.darkAccent,
@@ -35,6 +36,7 @@ function Project({ theme, width, content }) {
           href={content.pdf}
           className="sourceLink"
           target="_blank"
+          rel="noreferrer"
           style={{
             backgroundColor: theme.accent,
             color: theme.darkAccent,

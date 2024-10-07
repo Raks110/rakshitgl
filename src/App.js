@@ -32,13 +32,16 @@ function App() {
     <>
       <HelmetProvider>
         <Helmet
+          htmlAttributes={{
+            style: `background-color: ${themedColors.primaryBackground}`,
+          }}
           bodyAttributes={{
             style: `background-color: ${themedColors.primaryBackground}`,
           }}
         />
       </HelmetProvider>
       <div className="App">
-        <BasicNavbar theme={themedColors} />
+        <BasicNavbar theme={themedColors} width={width} />
         <div className="dashboard-items">
           <Bio
             style={styleParentFloatingItems(themedColors, width)}
