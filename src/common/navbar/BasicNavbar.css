@@ -9,3 +9,8 @@
 .theme-toggle {
     justify-content: center;
 }
+
+.active {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+}

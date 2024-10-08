@@ -1,0 +1,31 @@
+.allProjectsParent {
+    margin: 80px 0px;
+}
+
+.allProjectsTitle {
+    font-size: x-large;
+    text-align: left;
+    margin: 16px;
+}
+
+.allProjectsFooter {
+    margin: 16px;
+    display: block;
+    font-size: smaller;
+}
+
+.internalNavbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 2.5%;
+}
+
+.verticalCenter {
+    margin: auto 0px
+}
+
+.showAllIcon {
+    font-size: large;
+    font-weight: bold;
+    margin: auto 0px;
+}

@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import "./BasicNavbar.css";
 import ThemeToggle from "../theme/ThemeToggle";
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function BasicNavbar(props) {
   var theme = props.theme;
@@ -11,6 +12,10 @@ function BasicNavbar(props) {
 
   const inputRef = React.useRef(null);
   const handleClick = React.useCallback(() => inputRef.current?.click(), []);
+  const closeNavbar = () => clickToggleNavbar(handleClick, props.width);
+  const setActiveNav = (link) => setActive(link, location);
+
+  const location = useLocation();
 
   return (
     <>
@@ -22,7 +27,9 @@ function BasicNavbar(props) {
         className="fixed-top"
       >
         <Container>
-          <Navbar.Brand href="#home">rakshitgl</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/home">
+            rakshitgl
+          </Navbar.Brand>
           <Navbar.Toggle
             id="navbarToggler"
             aria-controls="responsive-navbar-nav"
@@ -32,21 +39,47 @@ function BasicNavbar(props) {
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="justify-content-end">
-              <Nav.Link href="/home" className="active">
+              <Nav.Link
+                as={Link}
+                to="/home"
+                className={
+                  "/home" === location.pathname ? "active" : "inactive"
+                }
+                onClick={closeNavbar}
+              >
                 home
               </Nav.Link>
-              <Nav.Link href="/notes">notes</Nav.Link>
-              <Nav.Link href="/projects">projects</Nav.Link>
-              <Nav.Link href="/about">about me</Nav.Link>
               <Nav.Link
-                onClick={
-                  props.width <= 575
-                    ? handleClick
-                    : () => {
-                        return;
-                      }
+                as={Link}
+                to="/notes"
+                className={
+                  "/notes" === location.pathname ? "active" : "inactive"
                 }
+                onClick={closeNavbar}
               >
+                notes
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/projects"
+                className={
+                  "/projects" === location.pathname ? "active" : "inactive"
+                }
+                onClick={closeNavbar}
+              >
+                projects
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/about"
+                className={
+                  "/about" === location.pathname ? "active" : "inactive"
+                }
+                onClick={closeNavbar}
+              >
+                about me
+              </Nav.Link>
+              <Nav.Link onClick={closeNavbar}>
                 <ThemeToggle />
               </Nav.Link>
             </Nav>
@@ -55,6 +88,16 @@ function BasicNavbar(props) {
       </Navbar>
     </>
   );
+}
+
+function clickToggleNavbar(handleClick, width) {
+  if (width <= 575) handleClick();
+}
+
+function setActive(link, location) {
+  console.log("Equating: ", location.pathName == link, " for ", link);
+  if (location.pathName == link) return "active";
+  return "";
 }
 
 function generateStyleForNavbar(theme) {

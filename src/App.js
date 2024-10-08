@@ -8,8 +8,7 @@ import colors from "./common/colors";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "./common/theme/ThemeContext";
-import { Route, Routes } from "react-router-dom";
-import DashBoard from "./dashboard/Dashboard";
+import AllContent from "./common/AllContent";
 
 function App() {
   const { darkTheme } = useContext(ThemeContext);
@@ -40,12 +39,7 @@ function App() {
       </HelmetProvider>
       <div className="App">
         <BasicNavbar theme={themedColors} width={width} />
-        <Routes>
-          <Route
-            path="*"
-            element={<DashBoard themedColors={themedColors} width={width} />}
-          />
-        </Routes>
+        <AllContent themedColors={themedColors} width={width} />
       </div>
     </>
   );

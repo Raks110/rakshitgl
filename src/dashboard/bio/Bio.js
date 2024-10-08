@@ -51,8 +51,8 @@ function Bio(props) {
               }}
               logo={{
                 darkTheme: isDarkTheme,
-                darkLogo: require("../../static/uchicago.png"),
-                lightLogo: require("../../static/uchicago.png"),
+                darkLogo: require("../../static/images/uchicago.png"),
+                lightLogo: require("../../static/images/uchicago.png"),
               }}
             />
             <Affiliation
@@ -65,8 +65,8 @@ function Bio(props) {
               }}
               logo={{
                 darkTheme: isDarkTheme,
-                darkLogo: require("../../static/deutsche_bank_dark.png"),
-                lightLogo: require("../../static/deutsche_bank.png"),
+                darkLogo: require("../../static/images/deutsche_bank_dark.png"),
+                lightLogo: require("../../static/images/deutsche_bank.png"),
               }}
             />
             <Affiliation
@@ -78,8 +78,8 @@ function Bio(props) {
               }}
               logo={{
                 darkTheme: isDarkTheme,
-                darkLogo: require("../../static/manipal_dark.png"),
-                lightLogo: require("../../static/manipal.png"),
+                darkLogo: require("../../static/images/manipal_dark.png"),
+                lightLogo: require("../../static/images/manipal.png"),
               }}
             />
           </div>

@@ -1,17 +1,16 @@
 import Bio from "./bio/Bio";
 import Projects from "./projects/Projects";
 import Notes from "./notes/Notes";
+import { styleParentFloatingItems } from "../common/utils/Utilities";
 
 function DashBoard(props) {
-  console.log("in dashboard: ", props);
-
   return (
     <div className="dashboard-items">
       <Bio
         style={styleParentFloatingItems(props.themedColors, props.width)}
         theme={props.themedColors}
         config={{
-          logo: require("../static/astronaut" +
+          logo: require("../static/images/astronaut" +
             (props.themedColors.dark ? "" : "_light") +
             ".gif"),
           logoHeight: 120,
@@ -36,28 +35,6 @@ function DashBoard(props) {
       </span>
     </div>
   );
-}
-
-function styleParentFloatingItems(themedColors, width) {
-  console.log("In style: ", themedColors, width);
-  return {
-    maxWidth:
-      width >= 1400
-        ? "50%"
-        : width >= 1200
-        ? "55%"
-        : width >= 1000
-        ? "65%"
-        : width >= 850
-        ? "75%"
-        : "95%",
-    backgroundColor: themedColors.accent,
-    margin: "auto",
-    borderRadius: 12,
-    padding: 16,
-    marginTop: 8,
-    color: themedColors.textColor,
-  };
 }
 
 export default DashBoard;

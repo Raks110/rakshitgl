@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Note from "./individual/Note";
 import "./Notes.css";
 
@@ -6,8 +7,8 @@ function Notes(props) {
     <div style={props.style}>
       <div className="internalNavbar">
         <span className="verticalCenter">notes and blogs</span>
-        <a
-          href="/notes"
+        <Link
+          to="/notes"
           className="showAll"
           style={{
             color: props.theme.textColor,
@@ -18,7 +19,7 @@ function Notes(props) {
           <span className="material-symbols-rounded showAllIcon">
             expand_content
           </span>
-        </a>
+        </Link>
       </div>
       <Note
         theme={props.theme}

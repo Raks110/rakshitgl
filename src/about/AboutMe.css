@@ -1,0 +1,16 @@
+.aboutMeParent {
+    margin: 80px 0px;
+}
+
+.constTitle {
+    font-size: medium;
+    display: block;
+    text-align: center;
+}
+
+.constDesc {
+    font-size: small;
+    display: block;
+    text-align: center;
+    margin: 8px;
+}

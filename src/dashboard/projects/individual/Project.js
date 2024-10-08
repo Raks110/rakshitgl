@@ -1,3 +1,4 @@
+import { linkToTechName } from "../../../common/utils/Utilities";
 import "./Project.css";
 
 function Project({ theme, width, content }) {
@@ -10,11 +11,35 @@ function Project({ theme, width, content }) {
         width: width >= 760 ? "47%" : "95%",
       }}
     >
-      <div className="header">
-        <div className="year" style={{ color: theme.darkAccent }}>
-          {content.year}
+      <div className="projectHeader">
+        <div className="projectTitle">
+          <div className="year" style={{ color: theme.darkAccent }}>
+            {content.year}
+          </div>
+          <div className="title">{content.title}</div>
         </div>
-        <div className="title">{content.title}</div>
+        <div className="langLogoCollection">
+          {content.logos?.map((item, index) => (
+            <span
+              key={index}
+              tabIndex="0"
+              data-toggle="tooltip"
+              title={linkToTechName(item)}
+            >
+              <img
+                alt={linkToTechName(item)}
+                src={require("../../../static" +
+                  (item.includes("opencl") && theme.dark
+                    ? item + "_dark.png"
+                    : item.includes("png") || item.includes("svg")
+                    ? item
+                    : item + ".png"))}
+                height={16}
+                className="langLogo"
+              />
+            </span>
+          ))}
+        </div>
       </div>
       <div className="footer">
         <div className="description">{content.description}</div>

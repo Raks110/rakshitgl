@@ -36,6 +36,7 @@
 
 .projectBody {
     width: 47%;
+    min-height: 200px;
     height: 100%;
     display: inline-flex;
     justify-content: space-between;
@@ -44,4 +45,26 @@
     padding: 16px;
     border-radius: 12px;
     text-align: left;
+}
+
+.langLogo {
+    margin: 4px 8px 4px 4px;
+}
+
+.langLogoCollection {
+    display: inline-block;
+    /* padding: 4px; */
+    /* margin: 8px 4px; */
+    /* border-radius: 12px; */
+    height: 36px;
+}
+
+.projectTitle {
+    display: inline-block;
+}
+
+.projectHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
