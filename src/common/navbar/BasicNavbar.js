@@ -32,12 +32,12 @@ function BasicNavbar(props) {
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="justify-content-end">
-              <Nav.Link href="#home" className="active">
+              <Nav.Link href="/home" className="active">
                 home
               </Nav.Link>
-              <Nav.Link href="#notes">notes</Nav.Link>
-              <Nav.Link href="#projects">projects</Nav.Link>
-              <Nav.Link href="#about">about me</Nav.Link>
+              <Nav.Link href="/notes">notes</Nav.Link>
+              <Nav.Link href="/projects">projects</Nav.Link>
+              <Nav.Link href="/about">about me</Nav.Link>
               <Nav.Link
                 onClick={
                   props.width <= 575

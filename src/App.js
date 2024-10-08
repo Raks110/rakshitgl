@@ -1,16 +1,15 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "https://code.jquery.com/jquery-2.1.3.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js";
 
 import BasicNavbar from "./common/navbar/BasicNavbar";
-import Bio from "./dashboard/bio/Bio";
-import Projects from "./dashboard/projects/Projects";
-import Notes from "./dashboard/notes/Notes";
 import colors from "./common/colors";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "./common/theme/ThemeContext";
+import { Route, Routes } from "react-router-dom";
+import DashBoard from "./dashboard/Dashboard";
 
 function App() {
   const { darkTheme } = useContext(ThemeContext);
@@ -23,7 +22,6 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(width);
   useEffect(() => {
     darkTheme ? setThemedColors(colors.dark) : setThemedColors(colors.light);
   }, [darkTheme]);
@@ -42,59 +40,15 @@ function App() {
       </HelmetProvider>
       <div className="App">
         <BasicNavbar theme={themedColors} width={width} />
-        <div className="dashboard-items">
-          <Bio
-            style={styleParentFloatingItems(themedColors, width)}
-            theme={themedColors}
-            config={{
-              logo: require("./static/astronaut" +
-                (darkTheme ? "" : "_light") +
-                ".gif"),
-              logoHeight: 120,
-              logoWidth: 120,
-            }}
+        <Routes>
+          <Route
+            path="*"
+            element={<DashBoard themedColors={themedColors} width={width} />}
           />
-          <Projects
-            style={styleParentFloatingItems(themedColors, width)}
-            theme={themedColors}
-            width={width}
-          />
-          <Notes
-            style={styleParentFloatingItems(themedColors, width)}
-            theme={themedColors}
-            width={width}
-          />
-          <span
-            className="final-footer"
-            style={{ color: darkTheme ? "white" : "black" }}
-          >
-            built with 🩵 in the windy city. more features underway.
-          </span>
-        </div>
+        </Routes>
       </div>
     </>
   );
-}
-
-function styleParentFloatingItems(themedColors, width) {
-  return {
-    maxWidth:
-      width >= 1400
-        ? "50%"
-        : width >= 1200
-        ? "55%"
-        : width >= 1000
-        ? "65%"
-        : width >= 850
-        ? "75%"
-        : "95%",
-    backgroundColor: themedColors.accent,
-    margin: "auto",
-    borderRadius: 12,
-    padding: 16,
-    marginTop: 8,
-    color: themedColors.textColor,
-  };
 }
 
 export default App;

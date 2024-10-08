@@ -7,7 +7,7 @@ function Projects(props) {
       <div className="internalNavbar">
         <span className="verticalCenter">recent projects</span>
         <a
-          href="#"
+          href="/projects"
           className="showAll"
           style={{
             color: props.theme.textColor,

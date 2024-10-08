@@ -7,7 +7,7 @@ function Notes(props) {
       <div className="internalNavbar">
         <span className="verticalCenter">notes and blogs</span>
         <a
-          href="#"
+          href="/notes"
           className="showAll"
           style={{
             color: props.theme.textColor,
