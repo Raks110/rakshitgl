@@ -13,7 +13,6 @@ function BasicNavbar(props) {
   const inputRef = React.useRef(null);
   const handleClick = React.useCallback(() => inputRef.current?.click(), []);
   const closeNavbar = () => clickToggleNavbar(handleClick, props.width);
-  const setActiveNav = (link) => setActive(link, location);
 
   const location = useLocation();
 
@@ -92,12 +91,6 @@ function BasicNavbar(props) {
 
 function clickToggleNavbar(handleClick, width) {
   if (width <= 575) handleClick();
-}
-
-function setActive(link, location) {
-  console.log("Equating: ", location.pathName == link, " for ", link);
-  if (location.pathName == link) return "active";
-  return "";
 }
 
 function generateStyleForNavbar(theme) {
