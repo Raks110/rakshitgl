@@ -15,6 +15,7 @@ function BasicNavbar(props) {
   const closeNavbar = () => clickToggleNavbar(handleClick, props.width);
 
   const location = useLocation();
+  const paths = ["/about", "/projects", "/notes"];
 
   return (
     <>
@@ -42,7 +43,7 @@ function BasicNavbar(props) {
                 as={Link}
                 to="/home"
                 className={
-                  "/home" === location.pathname ? "active" : "inactive"
+                  !paths.includes(location.pathname) ? "active" : "inactive"
                 }
                 onClick={closeNavbar}
               >

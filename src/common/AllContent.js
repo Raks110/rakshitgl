@@ -26,7 +26,7 @@ function AllContent(props) {
     >
       <Routes>
         <Route
-          path={`/home`}
+          path={`*`}
           element={
             <DashBoard themedColors={props.themedColors} width={props.width} />
           }
