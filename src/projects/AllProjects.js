@@ -9,7 +9,9 @@ function AllProjects(props) {
     <div className="allProjectsParent">
       <div style={styleParentFloatingItems(props.themedColors, props.width)}>
         <div className="internalNavbar">
-          <span className="verticalCenter allProjectsTitle">all projects</span>
+          <span className="verticalCenterAllProj allProjectsTitle">
+            all projects
+          </span>
           <Link
             className="showAllIcon"
             to="/home"

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Project from "./individual/Project";
 import "./Projects.css";
 
@@ -6,8 +7,8 @@ function Projects(props) {
     <div style={props.style}>
       <div className="internalNavbar">
         <span className="verticalCenter">recent projects</span>
-        <a
-          href="/projects"
+        <Link
+          to="/projects"
           className="showAll"
           style={{
             color: props.theme.textColor,
@@ -18,7 +19,7 @@ function Projects(props) {
           <span className="material-symbols-rounded showAllIcon">
             expand_content
           </span>
-        </a>
+        </Link>
       </div>
       <Project
         theme={props.theme}
