@@ -95,7 +95,9 @@ function Bio(props) {
               color: !isDarkTheme ? accentBackground : primaryBackground,
             }}
           >
-            <span className="verticalCenter">check out the source code </span>
+            <span className="verticalCenterBio">
+              check out the source code{" "}
+            </span>
             <span className="material-symbols-rounded verticalCenter sourceIcon">
               open_in_new
             </span>
