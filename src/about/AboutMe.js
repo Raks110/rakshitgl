@@ -53,7 +53,9 @@ function AboutMe(props) {
                 : primaryBackground,
             }}
           >
-            <span className="verticalCenterBio">github </span>
+            <span className="verticalCenterBio" style={{ color: "#000" }}>
+              github{" "}
+            </span>
             <img
               src={require("../static/images/github.png")}
               height={20}
