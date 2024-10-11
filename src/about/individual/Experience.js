@@ -1,6 +1,6 @@
 import "./Experience.css";
 
-function Experience({ themedColors, content }) {
+function Experience({ themedColors, content, width }) {
   return (
     <div
       className="aboutCore"
@@ -8,6 +8,9 @@ function Experience({ themedColors, content }) {
         backgroundColor: themedColors.primaryBackground,
       }}
     >
+      <div className="aboutYear" style={{ color: themedColors.textColor }}>
+        {content.year}
+      </div>
       <span
         className="constSubTitle"
         style={{ color: themedColors.darkAccent }}
@@ -36,7 +39,10 @@ function Experience({ themedColors, content }) {
             color: themedColors.darkAccent,
           }}
         >
-          <span className="material-symbols-rounded highlightIcon">
+          <span
+            className="material-symbols-rounded highlightIcon"
+            style={{ display: width < 500 ? "none" : "block" }}
+          >
             award_star
           </span>
           <span className="highDesc">{item}</span>

@@ -68,6 +68,7 @@ function AboutMe(props) {
           <Experience
             key={index}
             themedColors={props.themedColors}
+            width={props.width}
             content={item}
           />
         ))}
