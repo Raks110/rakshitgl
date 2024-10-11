@@ -1,11 +1,13 @@
 .aboutMeParent {
     margin: 80px 0px;
+    padding: 16px;
 }
 
 .constTitle {
-    font-size: medium;
+    font-size: x-large;
     display: block;
-    text-align: center;
+    text-align: left;
+    margin: 8px;
 }
 
 .constDesc {
@@ -13,4 +15,19 @@
     display: block;
     text-align: center;
     margin: 8px;
+}
+
+.constSubTitle {
+    font-size: medium;
+    display: block;
+    text-align: left;
+    margin: 16px 8px 24px 8px;
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
+}
+
+.aboutLinks {
+    margin: 16px -4px;
+    align-items: start;
+    display: flex;
 }

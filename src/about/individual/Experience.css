@@ -1,0 +1,39 @@
+.aboutCore {
+    padding: 8px 16px 24px 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.aboutDesc {
+    text-align: justify;
+    line-height: 1.8em;
+    margin: 0px 8px 0px 10px;
+}
+
+.aboutLogo {
+    float: left;
+}
+
+.aboutLogoImg {
+    height: 80px;
+    margin: 0px 16px 0px 8px;
+}
+
+.highlightIcon {
+    font-size: x-large;
+    margin-right: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+.aboutHigh {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: start;
+    margin: 16px 8px;
+}
+
+.highDesc {
+    text-align: justify;
+}

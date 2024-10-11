@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import AllProjects from "../projects/AllProjects";
 import DashBoard from "../dashboard/Dashboard";
 import AboutMe from "../about/AboutMe";
+import AllNotes from "../notes/AllNotes";
 
 function AllContent(props) {
   const location = useLocation();
@@ -49,7 +50,7 @@ function AllContent(props) {
         <Route
           path={`/notes`}
           element={
-            <AboutMe themedColors={props.themedColors} width={props.width} />
+            <AllNotes themedColors={props.themedColors} width={props.width} />
           }
         />
       </Routes>
