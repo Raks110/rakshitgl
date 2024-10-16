@@ -6,8 +6,10 @@ function Notes(props) {
   return (
     <div style={props.style}>
       <div className="internalNavbar">
-        <span className="verticalCenter">notes and blogs</span>
-        <Link
+        <span className="verticalCenter">notes and blogs (coming soon)</span>
+        {
+          //TODO: implement this
+          /* <Link
           to="/notes"
           className="showAll"
           style={{
@@ -19,7 +21,8 @@ function Notes(props) {
           <span className="material-symbols-rounded showAllIcon">
             expand_content
           </span>
-        </Link>
+        </Link> */
+        }
       </div>
       <Note
         theme={props.theme}

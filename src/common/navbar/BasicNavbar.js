@@ -49,7 +49,9 @@ function BasicNavbar(props) {
               >
                 home
               </Nav.Link>
-              <Nav.Link
+              {
+                //TODO: implement this
+                /* <Nav.Link
                 as={Link}
                 to="/notes"
                 className={
@@ -58,7 +60,8 @@ function BasicNavbar(props) {
                 onClick={closeNavbar}
               >
                 notes
-              </Nav.Link>
+              </Nav.Link> */
+              }
               <Nav.Link
                 as={Link}
                 to="/projects"
