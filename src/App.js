@@ -1,7 +1,6 @@
 import "./App.css";
-import "https://code.jquery.com/jquery-2.1.3.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import BasicNavbar from "./common/navbar/BasicNavbar";
 import colors from "./common/colors";

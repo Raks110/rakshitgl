@@ -1,5 +1,6 @@
 import "./Bio.css";
 import Affiliation from "./affiliations/Affiliation";
+import "./affiliations/Affiliation.css";
 
 function Bio(props) {
   var isDarkTheme = props.theme.dark;

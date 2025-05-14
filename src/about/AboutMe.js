@@ -37,6 +37,7 @@ function AboutMe(props) {
               src={require("../static/images/linkedin.png")}
               height={19}
               width={19}
+              alt="LinkedIn logo"
             />
           </a>
           <a
@@ -61,6 +62,7 @@ function AboutMe(props) {
               height={20}
               width={20}
               style={{ marginLeft: 2 }}
+              alt="GitHub logo"
             />
           </a>
         </div>

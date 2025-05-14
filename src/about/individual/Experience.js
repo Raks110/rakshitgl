@@ -21,6 +21,7 @@ function Experience({ themedColors, content, width }) {
         <img
           className="aboutLogoImg"
           src={require("../../static/images/" + content.logo)}
+          alt={content.title + " logo"}
         />
       </div>
       <div

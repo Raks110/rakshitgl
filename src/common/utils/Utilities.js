@@ -42,9 +42,17 @@ export function linkToTechName(item) {
     return "OpenCL";
   }
   if (item.includes("pytorch")) {
-    return "Pytorch";
+    return "PyTorch";
   }
   if (item.includes("react")) {
     return "React";
   }
+  if (item.includes("golang")) {
+    return "Go";
+  }
+  if (item.includes("c.")) {
+    return "C";
+  }
+  // Default case if no match is found
+  return item.split('/').pop().split('.')[0].replace(/_/g, ' ');
 }
