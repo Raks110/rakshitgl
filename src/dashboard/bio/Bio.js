@@ -103,6 +103,33 @@ function Bio(props) {
               open_in_new
             </span>
           </a>
+          <a
+            className="source"
+            href="https://linkedin.com/in/rakshitgl"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              backgroundColor: isDarkTheme
+                ? accentBackground
+                : primaryBackground,
+              color: !isDarkTheme
+                ? accentBackground
+                : primaryBackground,
+            }}
+          >
+            <span
+              className="verticalCenterBio"
+              style={{ color: "#006399", marginRight: 2 }}
+            >
+              linkedin{" "}
+            </span>
+            <img
+              src={require("../../static/images/linkedin.png")}
+              height={19}
+              width={19}
+              alt="LinkedIn logo"
+            />
+          </a>
         </div>
       </div>
     </>
